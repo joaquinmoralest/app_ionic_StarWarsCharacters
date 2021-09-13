@@ -1,9 +1,20 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>details</ion-title>
-  </ion-toolbar>
+  <app-header [pageTitle]="pageTitle"></app-header>
 </ion-header>
 
 <ion-content>
-
+  <ion-card>
+    <img [src]="personaje.image" [alt]="personaje.name">
+    <ion-card-header>
+      <ion-card-subtitle>
+        {{ personaje.homeworld }}
+      </ion-card-subtitle>
+      <ion-card-title>
+        {{ personaje.name }}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Más información en <i>{{ personaje.wiki }}</i>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
